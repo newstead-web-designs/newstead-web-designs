@@ -156,13 +156,13 @@
 
         </div>
 
-        <!-- Right Column: Netlify Contact Form with Validation and Styling -->
+        <!-- Right Column: Netlify Contact Form  -->
         <div id="message" class="col-12 col-lg-6 p-5">
           <h2 class="mb-4">Send Us a Message</h2>
           <p class="mb-4">Fill out the form below, and we'll get back to you as soon as we can.</p>
 
           <!-- Contact Form -->
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thankyou.html"
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
             class="needs-validation p-4 rounded shadow-sm" novalidate>
 
             <!-- Netlify hidden input -->
@@ -172,6 +172,9 @@
             <p class="d-none">
               <label>Don't fill this out if you're human: <input name="bot-field"></label>
             </p>
+
+            <!-- Hidden field to collect selected services -->
+            <input type="hidden" name="Services" id="services_list">
 
             <!-- Name -->
             <div class="mb-4">
@@ -245,9 +248,6 @@
 
               </div>
             </fieldset>
-
-            <!-- Hidden field to collect selected services -->
-            <input type="hidden" name="Services" id="services_list">
 
             <!-- Message -->
             <div class="mb-4">
@@ -379,8 +379,8 @@
   <!-- This Year Script -->
   <script src="resources/js/thisYear.js"></script>
 
-  <!-- This script ensures only the services the user selects are sent in the form -->
-  <script src="resources/js/contact.js"></script>
+  <!-- Form Checklist Script -->
+  <script src="resources/js/contactForm.js"></script>
 
   <!-- Form Validation Script -->
   <script src="resources/js/formValidation.js"></script>
