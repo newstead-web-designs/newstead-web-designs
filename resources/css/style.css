@@ -150,6 +150,10 @@
     box-shadow: 0 0 0 0.125rem var(--color-brand-secondary);
   }
 
+  section {
+    scroll-margin-top: 5rem;
+  }
+
   /* =======================
    Header and Navigation
    ======================= */
@@ -340,8 +344,7 @@
     text-align: center;
   }
 
-  /* Desktop screens */
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     .hero {
       min-height: 80vh;
     }
