@@ -191,22 +191,12 @@
     <!-- Portfolio Section -->
     <section class="container-fluid py-5">
       <div class="row">
-        <div class="col-12 col-md-10 col-lg-8 mx-auto">
+        <div class="col-10 col-md-8 col-lg-6 mx-auto">
           <h2 class="text-center mb-4">Our Portfolio</h2>
           <p class="text-center mb-4">Browse our example websites for inspiration and ideas for your own site.</p>
 
           <div id="carouselIndicators" class="carousel carousel-dark slide carousel-fade"
             aria-label="Website portfolio examples">
-
-            <!-- Indicators -->
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1" data-bs-theme="dark"></button>
-              <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"
-                data-bs-theme="dark"></button>
-              <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"
-                data-bs-theme="dark"></button>
-            </div>
 
             <!-- Slides -->
             <div class="carousel-inner">
@@ -231,11 +221,11 @@
               <!-- Slide 2 -->
               <div class="carousel-item position-relative d-flex justify-content-center align-items-center">
 
-                <a href="https://blossomsandbooksbookkeepingdemo.netlify.app/" target="_blank" rel="noopener noreferrer"
+                <a href="https://blossomandbooksbookkeepingdemo.netlify.app/" target="_blank" rel="noopener noreferrer"
                   class="text-decoration-none d-flex flex-column justify-content-center align-items-center">
 
                   <img src="resources/images/portfolio2.png" class="img-fluid rounded d-block"
-                    alt="Blossoms and Books Bookkeeping homepage shown on a laptop and mobile">
+                    alt="Blossom and Books Bookkeeping homepage shown on a laptop and mobile">
 
                   <div class="carousel-caption-full d-flex flex-column justify-content-center align-items-center">
                     <h3 class="text-center">Blossom & Books Bookkeeping</h3>
@@ -249,8 +239,8 @@
                 <a href="https://wingsoflovephotographydemo.netlify.app/" target="_blank" rel="noopener noreferrer"
                   class="text-decoration-none d-flex flex-column justify-content-center align-items-center">
 
-                  <img src="resources/images/portfolio3.png" class="img-fluid rounded d-block" alt="Photography website"
-                   >
+                  <img src="resources/images/portfolio3.png" class="img-fluid rounded d-block"
+                    alt="Photography website">
 
                   <div class="carousel-caption-full d-flex flex-column justify-content-center align-items-center">
                     <h3>Wings of Love Photography</h3>
@@ -260,23 +250,35 @@
 
             </div>
 
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev"
-              data-bs-theme="dark">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next"
-              data-bs-theme="dark">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <div class="d-flex align-items-center justify-content-center">
+
+              <!-- Previous Arrow -->
+              <button type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev"
+                class="btn p-0 me-3">
+                <i class="fa-solid fa-arrow-left-long fa-lg" aria-hidden="true"></i>
+                <span class="visually-hidden">Previous</span>
+              </button>
+
+              <!-- Indicators -->
+              <div class="carousel-indicators d-flex justify-content-center m-0 position-static">
+                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" data-bs-theme="dark"></button>
+                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" data-bs-theme="dark"></button>
+                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" data-bs-theme="dark"></button>
+              </div>
+
+              <!-- Next Arrow -->
+              <button type="button" data-bs-target="#carouselIndicators" data-bs-slide="next" data-bs-theme="dark"
+                class="btn p-0 ms-3">
+                    <i class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>
+                <span class="visually-hidden">Next</span>
+              </button>
+
+            </div>
 
           </div>
         </div>
       </div>
     </section>
-
     <!-- Why Choose Us Section -->
     <section class="container-fluid py-5">
       <div class="container px-3 px-lg-5">
@@ -512,7 +514,7 @@
               <p class="small mb-3">Small businesses wanting a website with core dedicated pages (e.g., About,
                 Services, Contact).</p>
               <div class="mt-auto">
-                <a href="https://blossomsandbooksbookkeepingdemo.netlify.app/" target="_blank" rel="noopener noreferrer"
+                <a href="https://blossomandbooksbookkeepingdemo.netlify.app/" target="_blank" rel="noopener noreferrer"
                   class="btn btn-primary btn-sm">See
                   Example</a>
               </div>

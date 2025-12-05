@@ -481,6 +481,21 @@
     opacity: 1;
   }
 
+  .carousel button {
+    color: var(--color-brand-primary);
+  }
+
+    .carousel button:hover {
+    transition: none;
+    transform: none;
+  }
+
+  .carousel button:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+
   /* =======================
    Summary
    ======================= */
