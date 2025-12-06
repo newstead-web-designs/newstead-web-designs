@@ -248,31 +248,6 @@
     color: var(--color-bg-primary);
   }
 
-  .btn.btn-primary:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 0.125rem var(--color-brand-secondary);
-  }
-
-  .btn.btn-secondary {
-    background-color: transparent;
-    border: 2px solid var(--color-brand-primary);
-    color: var(--color-brand-primary);
-  }
-
-  .btn.btn-secondary:hover,
-  .btn.btn-secondary:focus,
-  .btn.btn-secondary:focus-visible,
-  .btn.btn-secondary:active {
-    background-color: var(--color-brand-secondary);
-    border: 2px solid var(--color-brand-secondary);
-    color: var(--color-bg-primary);
-  }
-
-  .btn.btn-secondary:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 0.125rem var(--color-brand-secondary);
-  }
-
   /* =======================
    Menu Toggle Button
    ======================= */
