@@ -150,7 +150,7 @@
     box-shadow: 0 0 0 0.125rem var(--color-brand-secondary);
   }
 
-  section {
+  main {
     scroll-margin-top: 5rem;
   }
 
@@ -307,7 +307,7 @@
    ============================== */
   .hero {
     position: relative;
-    background-image: url('../images/hero.jpg');
+    background-image: url('../images/web/hero.webp');
     /* Stock photo ID:1222529363 */
     background-size: cover;
     background-position: center;
@@ -454,7 +454,7 @@
     color: var(--color-brand-primary);
   }
 
-    .carousel button:hover {
+  .carousel button:hover {
     transition: none;
     transform: none;
   }
@@ -471,7 +471,7 @@
 
   .summary {
     position: relative;
-    background-image: url('../images/summary-bg.jpg');
+    background-image: url('../images/web/summary-bg.webp');
     /* Photo by Artem Sapegin on Unsplash */
     background-size: cover;
     background-position: center;
@@ -690,19 +690,19 @@
 
   /* Logo - Dark Mode */
   body.dark-mode .logo {
-    content: url('../images/logo-dark.svg');
+    content: url('../images/web/logo-dark.svg');
     /* Photo by Mareks Steins on Unsplash */
   }
 
   /* Hero Section - Dark Mode */
   body.dark-mode .hero {
-    background-image: url('../images/hero-dark.jpg');
+    background-image: url('../images/web/hero-dark.webp');
     /* Photo by Mareks Steins on Unsplash */
   }
 
   /* Hero Section - Dark Mode */
   body.dark-mode .summary {
-    background-image: url('../images/summary-bg-dark.jpg');
+    background-image: url('../images/web/summary-bg-dark.webp');
     /* Photo by Bernd 📷 Dittrich on Unsplash */
   }
 
