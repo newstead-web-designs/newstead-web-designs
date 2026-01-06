@@ -42,8 +42,10 @@
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #e4ede4;
   --color-bg-tertiary: #f7f9f4;
-  --color-overlay-primary: rgba(228, 237, 228, 0.7); /* #e4ede4; */
-  --color-overlay-secondary: rgba(255, 255, 255, 0.7); /* #ffffff; */
+  --color-overlay-primary: rgba(228, 237, 228, 0.7);
+  /* #e4ede4; */
+  --color-overlay-secondary: rgba(255, 255, 255, 0.7);
+  /* #ffffff; */
   --color-brand-primary: #2b4a3e;
   --color-brand-secondary: #356157;
   --color-accent-primary: #0c3c6e;
@@ -148,7 +150,8 @@
     box-shadow: 0 0 0 0.125rem var(--color-brand-secondary);
   }
 
-  main {
+  main,
+  section {
     scroll-margin-top: 5rem;
   }
 
@@ -246,6 +249,22 @@
     color: var(--color-bg-primary);
   }
 
+  .btn.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-brand-primary);
+    color: var(--color-brand-primary);
+  }
+
+  .btn.btn-secondary:hover,
+  .btn.btn-secondary:focus,
+  .btn.btn-secondary:focus-visible,
+  .btn.btn-secondary:active {
+    background-color: var(--color-brand-primary);
+    border: 2px solid var(--color-brand-primary);
+    color: var(--color-bg-primary);
+  }
+
+
   /* =======================
    Menu Toggle Button
    ======================= */
@@ -301,7 +320,7 @@
   }
 
   /* ==============================
-   Hero Section
+   Hero
    ============================== */
   .hero {
     position: relative;
@@ -692,13 +711,13 @@
     /* Photo by Mareks Steins on Unsplash */
   }
 
-  /* Hero Section - Dark Mode */
+  /* Hero - Dark Mode */
   body.dark-mode .hero {
     background-image: url('../images/web/hero-dark.webp');
     /* Photo by Mareks Steins on Unsplash */
   }
 
-  /* Hero Section - Dark Mode */
+  /* Hero- Dark Mode */
   body.dark-mode .summary {
     background-image: url('../images/web/summary-bg-dark.webp');
     /* Photo by Bernd 📷 Dittrich on Unsplash */
