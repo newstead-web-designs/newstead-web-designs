@@ -2,34 +2,48 @@
 <html lang="en">
 
 <head>
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-087M3ZRWZ4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-087M3ZRWZ4');
   </script>
 
-  <!-- Meta and title -->
+  <!-- Meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- SEO Description -->
-  <meta name="description"
-    content="Custom, hand-coded websites for Australian small businesses. Expert web design, transparent pricing, and ongoing support based in Launceston, Tasmania.">
-  <!-- Social Sharing Metadata -->
-  <meta property="og:title" content="Newstead Web Designs | Custom Websites & Digital Solutions" />
-  <meta property="og:description"
-    content="Professional web design and digital solutions for small businesses and creative professionals. Build your online presence with Newstead Web Designs." />
-  <meta property="og:image" content="resources/images/web/social-preview.webp" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.newsteadwebdesigns.com.au/" />
-  <meta property="og:locale" content="en_AU" />
+  <meta name="description" content="Read the Newstead Web Designs blog for tips, insights, and news about creating custom, hand-coded websites for Australian small businesses.">
 
   <!-- Title -->
   <title>Blog | Newstead Web Designs</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blog | Newstead Web Designs" />
+  <meta property="og:description" content="Explore our blog for insights on web design, small business tips, and building professional, SEO-friendly websites." />
+  <meta property="og:image" content="https://www.newsteadwebdesigns.com.au/resources/images/web/blog-hero.webp" />
+  <meta property="og:url" content="https://www.newsteadwebdesigns.com.au/blog.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- JSON-LD Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Newstead Web Designs Blog",
+    "url": "https://www.newsteadwebdesigns.com.au/blog.html",
+    "description": "Tips, insights, and news about creating custom, hand-coded websites for Australian small businesses.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Newstead Web Designs",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.newsteadwebdesigns.com.au/resources/images/web/logo.svg"
+      }
+    }
+  }
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" href="resources/images/web/favicon.svg" type="image/svg+xml">
@@ -117,23 +131,24 @@
 
     <!-- Page Heading -->
     <section class="container content py-0 py-lg-5">
-      <h1 class="text-center my-5">Blog</h1>
-      <p class="text-center">Helpful tips, insights, and updates to guide small businesses in planning, designing, and
-        maintaining their websites.
+      <h1 class="text-center my-5">Web Design Blog for Small Businesses</h1>
+      <p class="text-center">
+        Practical web design tips, SEO insights, and website guidance for Australian small businesses.
       </p>
     </section>
+
 
     <!-- Blog Posts Section -->
     <section class="container content py-0 py-lg-5">
       <div class="row g-3">
 
         <!-- February 2026 -->
-        <article class="col-12 mb-4 d-none">
+        <article class="col-12 mb-4 d-none" aria-labelledby="post-202602">
           <div class="card h-100 shadow-sm p-3">
             <div class="row g-3 align-items-center">
               <div class="col-12 col-lg-8 order-2 order-lg-1">
-                <small class="mb-1">9 February 2026</small>
-                <h2 class="card-title">Web Accessibility & WCAG Compliance</h2>
+                <time datetime="2026-02-09" class="mb-1 d-block">09 February 2026</time>
+                <h2 id="post-202602" class="card-title">Web Accessibility & WCAG Compliance</h2>
                 <p>How following WCAG guidelines makes your website usable for everyone and improves accessibility.</p>
                 <a href="202602.html" class="btn btn-primary btn-sm">
                   Read More
@@ -149,12 +164,12 @@
         </article>
 
         <!-- January 2026 -->
-        <article class="col-12 mb-4">
+        <article class="col-12 mb-4" aria-labelledby="post-202601">
           <div class="card h-100 shadow-sm p-3">
             <div class="row g-3 align-items-center">
               <div class="col-12 col-lg-8 order-2 order-lg-1">
-                <small class="mb-1">12 January 2026</small>
-                <h2 class="card-title">Starting a Small Business Website</h2>
+                <time datetime="2026-01-12" class="mb-1 d-block">12 January 2026</time>
+                <h2 id="post-202601" class="card-title">Starting a Small Business Website</h2>
                 <p>Tips for planning, designing, and maintaining a professional and accessible small business website.
                 </p>
                 <a href="202601.html" class="btn btn-primary btn-sm">
@@ -177,10 +192,10 @@
     <section class="container-fluid summary d-flex align-items-center py-0 py-lg-5 mt-5">
       <div class="row">
         <div class="col-12 p-5 py-lg-0">
-          <h2 class="mb-4">Custom Websites, Built for Your Business</h2>
+          <h2 class="mb-4">Custom Hand-Coded Websites for Australian Small Businesses</h2>
           <p class="mb-4">
-            Let’s build a professional, hand-coded website that showcases your brand, captivates your audience, and
-            helps your business grow.
+            Partner with Newstead Web Designs to create a professional hand-coded website for your business. Showcase
+            your services, attract clients, and grow your online presence with expert web design and development.
           </p>
           <div class="d-flex justify-content-start">
             <a href="contact.html" class="btn btn-primary" role="button">Start Your Website Today</a>
@@ -195,24 +210,45 @@
   <footer>
 
     <!-- Top Section: Brand, Links, Contact -->
-    <section class="container-fluid py-5 border-bottom border-secondary footer-top">
+    <section class="container-fluid p-5 border-bottom border-secondary footer-top">
       <div class="row gy-5">
 
-        <!-- Column 1: Brand & CTA -->
-        <div class="col-12 col-lg-4 d-flex flex-column">
+        <!-- Column 1: Brand, CTA & Contact -->
+        <div class="col-12 col-md-10 d-flex flex-column">
           <a class="navbar-brand d-flex align-items-center" href="index.html">
             <img class="logo" src="resources/images/web/logo.svg" alt="Newstead Web Designs Logo">
           </a>
           <p class="col-10 small ms-1 mb-3">We code, host, and maintain websites from Launceston, Tasmania for
             small businesses across Australia.</p>
-          <div class="mt-2">
+          <div class="mt-2 mb-3">
             <a class="btn btn-primary btn-sm mt-auto" href="contact.html" role="button">Get
               Started</a>
           </div>
+
+          <ul class="list-unstyled">
+
+            <!-- Email -->
+            <li class="d-flex align-items-start small mb-2">
+              <a href="mailto:hello@newsteadwebdesigns.com.au" class="text-decoration-none">
+                <span class="me-2"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                hello@newsteadwebdesigns.com.au
+              </a>
+            </li>
+
+            <!-- Location -->
+            <address class="d-flex align-items-start small mb-2">
+              <a href="https://www.google.com/maps/place/Launceston+TAS/@-41.4345875,147.0540643" target="_blank"
+                rel="noopener noreferrer" class="text-decoration-none">
+                <span class="me-2"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                Launceston, Tasmania, Australia
+              </a>
+            </address>
+
+          </ul>
         </div>
 
         <!-- Column 2: Quick Links -->
-        <div class="col-12 col-md-6 col-lg-4 d-flex flex-column">
+        <div class="col-12 col-md-2 d-flex flex-column small">
           <nav aria-label="Footer quick links">
             <ul class="nav flex-column ms-1 mb-3 gap-3">
               <li class="nav-item"><a class="px-0 py-1" href="index.html">Home</a></li>
@@ -227,37 +263,6 @@
               </li>
             </ul>
           </nav>
-        </div>
-
-        <!-- Column 3: Contact & Social -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <ul class="list-unstyled ms-1 mb-3">
-
-            <!-- Email -->
-            <li class="d-flex align-items-start mb-2">
-              <a href="mailto:hello@newsteadwebdesigns.com.au" class="text-decoration-none">
-                <span class="me-2"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
-                hello@newsteadwebdesigns.com.au
-              </a>
-            </li>
-
-            <!-- Location -->
-            <address class="d-flex align-items-start mb-2">
-              <a href="https://www.google.com/maps/place/Launceston+TAS/@-41.4345875,147.0540643" target="_blank"
-                rel="noopener noreferrer" class="text-decoration-none">
-                <span class="me-2"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
-                Launceston, Tasmania, Australia
-              </a>
-            </address>
-          </ul>
-
-          <!-- Social Links -->
-          <div class="d-flex gap-3 ms-1 mt-auto">
-            <a href="https://www.facebook.com/newsteadwebdesigns" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook"><i class="fa-brands fa-facebook fa-lg"></i></a>
-            <a href="https://www.instagram.com/newsteadwebdesigns" target="_blank" rel="noopener noreferrer"
-              aria-label="Instagram"><i class="fa-brands fa-instagram fa-lg"></i></a>
-          </div>
         </div>
 
       </div>

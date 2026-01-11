@@ -2,34 +2,47 @@
 <html lang="en">
 
 <head>
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-087M3ZRWZ4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-087M3ZRWZ4');
   </script>
 
-  <!-- Meta and title -->
+  <!-- Meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- SEO Description -->
-  <meta name="description"
-    content="Custom, hand-coded websites for Australian small businesses. Expert web design, transparent pricing, and ongoing support based in Launceston, Tasmania.">
-  <!-- Social Sharing Metadata -->
-  <meta property="og:title" content="Newstead Web Designs | Custom Websites & Digital Solutions" />
-  <meta property="og:description"
-    content="Professional web design and digital solutions for small businesses and creative professionals. Build your online presence with Newstead Web Designs." />
-  <meta property="og:image" content="resources/images/web/social-preview.webp" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.newsteadwebdesigns.com.au/" />
-  <meta property="og:locale" content="en_AU" />
+  <meta name="description" content="Get in touch with Newstead Web Designs. Contact us for custom, hand-coded websites, hosting, and website maintenance for Australian small businesses.">
 
   <!-- Title -->
-  <title>Contact Us | Newstead Web Designs</title>
+  <title>Contact | Newstead Web Designs</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | Newstead Web Designs" />
+  <meta property="og:description" content="Reach out to Newstead Web Designs for custom websites, hosting, or maintenance support for your small business." />
+  <meta property="og:image" content="https://www.newsteadwebdesigns.com.au/resources/images/web/contact-hero.webp" />
+  <meta property="og:url" content="https://www.newsteadwebdesigns.com.au/contact.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- JSON-LD Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Newstead Web Designs",
+    "url": "https://www.newsteadwebdesigns.com.au/",
+    "logo": "https://www.newsteadwebdesigns.com.au/resources/images/web/logo.svg",
+    "description": "Custom hand-coded websites for Australian small businesses. Fast, secure, and SEO-focused web design by Newstead Web Designs.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "hello@newsteadwebdesigns.com.au",
+      "url": "https://www.newsteadwebdesigns.com.au/contact.html"
+    }
+  }
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" href="resources/images/web/favicon.svg" type="image/svg+xml">
@@ -125,35 +138,11 @@
 
         <!-- Left Column: Info & Social -->
         <div class="col-12 col-lg-6 p-5">
-          <h2 class="mb-3">Let's Build Your Website Together</h2>
+          <h2 class="mb-3">Custom Websites for Australian Small Businesses</h2>
           <p class="mb-3">
-            Have questions or are ready to start your website? We're here to help! Get your <strong>free website
-              planning
-              report</strong> and let us guide you from your first idea to launch - with reliable hosting, optional
-            ongoing support, and flexible payment options — making the process simple, clear, and stress-free.
-          </p>
-
-          <ul class="list-unstyled ms-1 mb-3">
-            <!-- Email -->
-            <li class="d-flex align-items-start mb-2">
-              <a href="mailto:hello@newsteadwebdesigns.com.au" class="text-decoration-none">
-                <span class="me-2"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
-                hello@newsteadwebdesigns.com.au
-              </a>
-            </li>
-          </ul>
-
-          <!-- Social Links -->
-          <div class="d-flex gap-3 ms-1 mt-3">
-            <a href="https://www.facebook.com/newsteadwebdesigns" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook"><i class="fa-brands fa-facebook fa-lg"></i></a>
-            <a href="https://www.instagram.com/newsteadwebdesigns" target="_blank" rel="noopener noreferrer"
-              aria-label="Instagram"><i class="fa-brands fa-instagram fa-lg"></i></a>
-          </div>
-
-          <p class="mt-3 ms-1">
-            Follow us online or send us a <a href="#message">message</a> - we'd love to hear from you!
-          </p>
+            Have questions or ready to start your website? Fill out the short form or email us directly at <a
+              href="mailto:hello@newsteadwebdesigns.com.au">hello@newsteadwebdesigns.com.au</a>, and we'll get back to
+            you as soon as we can.</p>
 
           <!--Image -->
           <div class="col-12 d-flex align-items-center justify-content-center my-0 my-lg-5">
@@ -165,8 +154,7 @@
         <!-- Right Column: Contact Form -->
         <div id="contact-form-section" class="col-12 col-lg-6 p-5">
 
-          <h2 class="mb-4">Send Us a Message</h2>
-          <p class="mb-4">Fill out the form below, and we'll get back to you as soon as we can.</p>
+          <h2 class="mb-4">Get Your Free Tailored Website Planning Report</h2>
 
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
             class="needs-validation p-4 rounded shadow-sm" novalidate>
@@ -204,7 +192,7 @@
             <div class="mb-4">
               <label for="business-description" class="form-label">Business Description & Goals</label>
               <textarea class="form-control" id="business-description" name="business_description" rows="5"
-                placeholder="Briefly tell us about your business and what you'd like to achieve with your website."></textarea>
+                placeholder="Briefly describe your business & goals"></textarea>
             </div>
 
             <!-- Existing Website -->
@@ -214,36 +202,12 @@
                 placeholder="If yes, please share the URL here.">
             </div>
 
-            <!-- Additional Message -->
-            <div class="mb-4">
-              <label for="additional-message" class="form-label">Additional Message</label>
-              <textarea class="form-control" id="additional-message" name="message" rows="5"
-                placeholder="Is there anything else you'd like us to know?"></textarea>
-            </div>
+            <button type="submit" class="btn btn-primary mb-4">Send My Free Website Planning Report</button>
+            <p class="mt-2">We'll review your details and send your free website planning report shortly.
+            </p>
 
-            <button type="submit" class="btn btn-primary">Send Message</button>
           </form>
         </div>
-
-
-        <!-- Toggle Forms Script -->
-        <script>
-          const quickMsgRadio = document.getElementById('quick-message');
-          const reportRadio = document.getElementById('planning-report');
-          const quickMsgForm = document.getElementById('quick-message-form');
-          const reportForm = document.getElementById('planning-report-form');
-
-          quickMsgRadio.addEventListener('change', () => {
-            quickMsgForm.classList.remove('d-none');
-            reportForm.classList.add('d-none');
-          });
-
-          reportRadio.addEventListener('change', () => {
-            quickMsgForm.classList.add('d-none');
-            reportForm.classList.remove('d-none');
-          });
-        </script>
-
       </div>
     </section>
 
@@ -253,24 +217,45 @@
   <footer>
 
     <!-- Top Section: Brand, Links, Contact -->
-    <section class="container-fluid py-5 border-bottom border-secondary footer-top">
+    <section class="container-fluid p-5 border-bottom border-secondary footer-top">
       <div class="row gy-5">
 
-        <!-- Column 1: Brand & CTA -->
-        <div class="col-12 col-lg-4 d-flex flex-column">
+        <!-- Column 1: Brand, CTA & Contact -->
+        <div class="col-12 col-md-10 d-flex flex-column">
           <a class="navbar-brand d-flex align-items-center" href="index.html">
             <img class="logo" src="resources/images/web/logo.svg" alt="Newstead Web Designs Logo">
           </a>
           <p class="col-10 small ms-1 mb-3">We code, host, and maintain websites from Launceston, Tasmania for
             small businesses across Australia.</p>
-          <div class="mt-2">
+          <div class="mt-2 mb-3">
             <a class="btn btn-primary btn-sm mt-auto" href="contact.html" role="button">Get
               Started</a>
           </div>
+
+          <ul class="list-unstyled">
+
+            <!-- Email -->
+            <li class="d-flex align-items-start small mb-2">
+              <a href="mailto:hello@newsteadwebdesigns.com.au" class="text-decoration-none">
+                <span class="me-2"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                hello@newsteadwebdesigns.com.au
+              </a>
+            </li>
+
+            <!-- Location -->
+            <address class="d-flex align-items-start small mb-2">
+              <a href="https://www.google.com/maps/place/Launceston+TAS/@-41.4345875,147.0540643" target="_blank"
+                rel="noopener noreferrer" class="text-decoration-none">
+                <span class="me-2"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                Launceston, Tasmania, Australia
+              </a>
+            </address>
+
+          </ul>
         </div>
 
         <!-- Column 2: Quick Links -->
-        <div class="col-12 col-md-6 col-lg-4 d-flex flex-column">
+        <div class="col-12 col-md-2 d-flex flex-column small">
           <nav aria-label="Footer quick links">
             <ul class="nav flex-column ms-1 mb-3 gap-3">
               <li class="nav-item"><a class="px-0 py-1" href="index.html">Home</a></li>
@@ -285,37 +270,6 @@
               </li>
             </ul>
           </nav>
-        </div>
-
-        <!-- Column 3: Contact & Social -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <ul class="list-unstyled ms-1 mb-3">
-
-            <!-- Email -->
-            <li class="d-flex align-items-start mb-2">
-              <a href="mailto:hello@newsteadwebdesigns.com.au" class="text-decoration-none">
-                <span class="me-2"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
-                hello@newsteadwebdesigns.com.au
-              </a>
-            </li>
-
-            <!-- Location -->
-            <address class="d-flex align-items-start mb-2">
-              <a href="https://www.google.com/maps/place/Launceston+TAS/@-41.4345875,147.0540643" target="_blank"
-                rel="noopener noreferrer" class="text-decoration-none">
-                <span class="me-2"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
-                Launceston, Tasmania, Australia
-              </a>
-            </address>
-          </ul>
-
-          <!-- Social Links -->
-          <div class="d-flex gap-3 ms-1 mt-auto">
-            <a href="https://www.facebook.com/newsteadwebdesigns" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook"><i class="fa-brands fa-facebook fa-lg"></i></a>
-            <a href="https://www.instagram.com/newsteadwebdesigns" target="_blank" rel="noopener noreferrer"
-              aria-label="Instagram"><i class="fa-brands fa-instagram fa-lg"></i></a>
-          </div>
         </div>
 
       </div>
