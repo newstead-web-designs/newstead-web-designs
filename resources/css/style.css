@@ -264,7 +264,6 @@
     color: var(--color-bg-primary);
   }
 
-
   /* =======================
    Menu Toggle Button
    ======================= */
@@ -332,7 +331,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     text-align: center;
   }
 
