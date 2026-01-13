@@ -6,41 +6,43 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-087M3ZRWZ4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-087M3ZRWZ4');
   </script>
 
   <!-- Google tag (gtag.js) event - delayed navigation helper -->
-<script>
-  // Helper function to delay opening a URL until a gtag event is sent.
-  // Call it in response to an action that should navigate to a URL.
-  function gtagSendEvent(url) {
-    var callback = function () {
-      if (typeof url === 'string') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion_event_submit_lead_form', {
-      'event_callback': callback,
-      'event_timeout': 2000,
-      // <event_parameters>
-    });
-    return false;
-  }
-</script>
+  <script>
+    // Helper function to delay opening a URL until a gtag event is sent.
+    // Call it in response to an action that should navigate to a URL.
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion_event_submit_lead_form', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+        // <event_parameters>
+      });
+      return false;
+    }
+  </script>
 
   <!-- Meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Get in touch with Newstead Web Designs. Contact us for custom, hand-coded websites, hosting, and website maintenance for Australian small businesses.">
+  <meta name="description"
+    content="Get in touch with Newstead Web Designs. Contact us for custom, hand-coded websites, hosting, and website maintenance for Australian small businesses.">
 
   <!-- Title -->
   <title>Contact | Newstead Web Designs</title>
 
   <!-- Open Graph -->
   <meta property="og:title" content="Contact | Newstead Web Designs" />
-  <meta property="og:description" content="Reach out to Newstead Web Designs for custom websites, hosting, or maintenance support for your small business." />
+  <meta property="og:description"
+    content="Reach out to Newstead Web Designs for custom websites, hosting, or maintenance support for your small business." />
   <meta property="og:image" content="https://www.newsteadwebdesigns.com.au/resources/images/web/contact.webp" />
   <meta property="og:url" content="https://www.newsteadwebdesigns.com.au/contact.html" />
   <meta property="og:type" content="website" />
@@ -70,7 +72,7 @@
     type="image/png">
   <link rel="icon" href="https://www.newsteadwebdesigns.com.au/resources/images/web/favicon-16x16.png" sizes="16x16"
     type="image/png">
-    
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
