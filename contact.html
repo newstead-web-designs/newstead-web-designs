@@ -162,8 +162,8 @@
         <div id="contact-form-section" class="col-12 col-lg-6 p-5">
 
           <h2 class="mb-4">Get Your Free Tailored Website Planning Report</h2>
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html"
-            class="needs-validation p-4 rounded shadow-sm" novalidate>
+          <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+            action="/thank-you.html" class="needs-validation p-4 rounded shadow-sm" novalidate>
 
             <!-- Netlify hidden input -->
             <input type="hidden" name="form-name" value="contact">
@@ -319,6 +319,19 @@
 
   <!-- Form Validation Script -->
   <script src="resources/js/formValidation.js"></script>
+
+  <script>
+    // Track GA4 event on form submission
+    const form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', function () {
+        gtag('event', 'conversion_event_submit_lead_form', {
+          'event_category': 'Contact Form',
+          'event_label': 'Contact Page Submission'
+        });
+      });
+    }
+  </script>
 
 </body>
 
