@@ -223,15 +223,18 @@
             if (!contactForm) return;
 
             contactForm.addEventListener('submit', function (e) {
-              e.preventDefault(); // stop immediate submission
+              e.preventDefault();
 
               gtag('event', 'conversion_event_submit_lead_form', {
                 event_callback: function () {
-                  contactForm.submit(); // submit after GA4 records event
+                  console.log('GA4 event sent'); // confirm in console
+                  // manually submit if needed:
+                  // contactForm.submit();
                 },
-                event_timeout: 3000 // allow up to 3 seconds
+                event_timeout: 5000
               });
             });
+
           });
         </script>
 
