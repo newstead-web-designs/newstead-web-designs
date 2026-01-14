@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +10,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-087M3ZRWZ4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-087M3ZRWZ4');
   </script>
@@ -17,6 +18,7 @@
   <!-- Bootstrap CSS (optional) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 
   <main class="container py-5">
@@ -44,19 +46,19 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const contactForm = document.querySelector('form[name="contact"]');
+
       if (!contactForm) return;
 
       contactForm.addEventListener('submit', function (e) {
-        e.preventDefault(); // stop immediate submission
+        e.preventDefault(); // Stop immediate submission
 
-        console.log('Submitting form, sending GA4 event...');
-
+        // Fire GA4 event
         gtag('event', 'conversion_event_submit_lead_form', {
           event_callback: function () {
-            console.log('GA4 event sent, now submitting form...');
+            // Submit form after GA4 event fires
             contactForm.submit();
           },
-          event_timeout: 5000
+          event_timeout: 2000
         });
       });
     });
@@ -65,4 +67,5 @@
   <!-- Bootstrap JS (optional) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
