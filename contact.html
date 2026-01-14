@@ -182,7 +182,7 @@
 
           <h2 class="mb-4">Get Your Free Tailored Website Planning Report</h2>
 
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html"
             class="needs-validation p-4 rounded shadow-sm" novalidate>
 
             <!-- Netlify hidden input -->
@@ -239,18 +239,18 @@
         <script>
           const contactForm = document.querySelector('form[name="contact"]');
 
-          contactForm.addEventListener('submit', function (e) {
-            e.preventDefault(); // temporarily stop form submission
-
+          contactForm.addEventListener('submit', function () {
             // Fire GA4 conversion event for Google Ads
-            gtag('event', 'conversion_event_submit_lead_form');
-
-            // Slight delay to ensure GA4 receives the event
-            setTimeout(() => {
-              contactForm.submit(); // then submit form normally
-            }, 300); // 300ms delay
+            gtag('event', 'conversion_event_submit_lead_form', {
+              event_callback: function () {
+                // Let Netlify handle redirect automatically
+                console.log('GA4 event sent.');
+              },
+              event_timeout: 2000
+            });
           });
         </script>
+
 
       </div>
     </section>
