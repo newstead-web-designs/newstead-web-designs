@@ -236,29 +236,28 @@
         </div>
 
         <!-- GA4 Conversion Tracking Script -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const contactForm = document.querySelector('form[name="contact"]');
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.querySelector('form[name="contact"]');
+            if (!contactForm) return;
 
-  if (!contactForm) return;
+            contactForm.addEventListener('submit', function (e) {
+              e.preventDefault();
 
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault(); // Stop immediate submission
-
-    // Fire GA4 event
-    gtag('event', 'conversion_event_submit_lead_form', {
-      event_callback: function () {
-        // Submit form after GA4 event fires
-        contactForm.submit();
-      },
-      event_timeout: 3000
-    });
-  });
-});
-</script>
-
-
-
+              if (typeof gtag === 'function') {
+                gtag('event', 'conversion_event_submit_lead_form', {
+                  event_callback: function () {
+                    contactForm.submit();
+                  },
+                  event_timeout: 3000
+                });
+              } else {
+                // fallback if gtag is not loaded yet
+                contactForm.submit();
+              }
+            });
+          });
+        </script>
 
       </div>
     </section>
