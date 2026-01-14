@@ -239,17 +239,17 @@
         <script>
           const contactForm = document.querySelector('form[name="contact"]');
 
-          contactForm.addEventListener('submit', function () {
-            // Fire GA4 conversion event for Google Ads
+          contactForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Stop immediate submission
             gtag('event', 'conversion_event_submit_lead_form', {
               event_callback: function () {
-                // Let Netlify handle redirect automatically
-                console.log('GA4 event sent.');
+                contactForm.submit(); // Submit form after GA4 event fires
               },
               event_timeout: 2000
             });
           });
         </script>
+
 
 
       </div>
