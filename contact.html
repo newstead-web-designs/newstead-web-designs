@@ -371,27 +371,21 @@
 
       if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
-          e.preventDefault(); // stop default submit
-          console.clear();    // clear all previous console noise
+          e.preventDefault();
           console.log('Form submitted! Sending GA4 event...');
-
-          if (typeof gtag === 'function') {
-            gtag('event', 'conversion_event_submit_lead_form', {
-              event_callback: function () {
-                console.log('GA4 event sent, submitting form now.');
-                contactForm.submit();
-              },
-              event_timeout: 3000
-            });
-          } else {
-            console.error('gtag is not defined!');
-            contactForm.submit(); // fallback submit
-          }
+          gtag('event', 'conversion_event_submit_lead_form', {
+            event_callback: function () {
+              console.log('GA4 event sent, submitting form now.');
+              contactForm.submit();
+            },
+            event_timeout: 3000
+          });
         });
       } else {
         console.error('Form not found!');
       }
     });
+
   </script>
 
 </body>
