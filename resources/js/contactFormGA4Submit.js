@@ -14,14 +14,11 @@ if (form) {
     });
 
     // Log to console to confirm the event triggers
-    console.log("%cGA4 Event triggered!", "color: green; font-weight: bold; font-size: 14px;");
+    console.log("GA4 Event triggered!");
 
-    // Show an alert to confirm the log appears (optional, for testing)
-    // alert("GA4 Event triggered!");
-
-    // Wait 1 second before submitting form so you have time to see the log
-    setTimeout(() => {
-      form.submit();
-    }, 1000); // 1000ms = 1 second
+    // TEMPORARILY COMMENT OUT the actual form submission for testing
+    // setTimeout(() => {
+    //   form.submit();
+    // }, 300);
   });
 }
