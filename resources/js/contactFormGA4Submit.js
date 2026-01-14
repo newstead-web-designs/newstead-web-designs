@@ -1,4 +1,6 @@
 // Contact Form GA4 Submit Script
+console.log("contactFormGA4Submit.js loaded");
+
 const form = document.getElementById('contact-form');
 if (form) {
   form.addEventListener('submit', function (e) {
