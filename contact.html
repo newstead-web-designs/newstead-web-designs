@@ -320,18 +320,8 @@
   <!-- Form Validation Script -->
   <script src="resources/js/formValidation.js"></script>
 
-  <script>
-    // Track GA4 event on form submission
-    const form = document.getElementById('contact-form');
-    if (form) {
-      form.addEventListener('submit', function () {
-        gtag('event', 'conversion_event_submit_lead_form', {
-          'event_category': 'Contact Form',
-          'event_label': 'Contact Page Submission'
-        });
-      });
-    }
-  </script>
+  <!-- GA4 Contact Form Submission -->
+  <script src="resources/js/contactFormGA4Submit.js"></script>
 
 </body>
 
