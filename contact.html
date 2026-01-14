@@ -366,24 +366,27 @@
   <script src="resources/js/formValidation.js"></script>
 
   <script>
-const contactForm = document.querySelector('form[name="contact"]');
+    document.addEventListener('DOMContentLoaded', function () {
+      const contactForm = document.querySelector('form[name="contact"]');
 
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e){
-    e.preventDefault();
-    console.log('Form submitted! Sending GA4 event...');
-    gtag('event', 'conversion_event_submit_lead_form', {
-      event_callback: function() {
-        console.log('GA4 event sent, submitting form now.');
-        contactForm.submit();
-      },
-      event_timeout: 3000
+      if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          console.log('Form submitted! Sending GA4 event...');
+          gtag('event', 'conversion_event_submit_lead_form', {
+            event_callback: function () {
+              console.log('GA4 event sent, submitting form now.');
+              contactForm.submit();
+            },
+            event_timeout: 3000
+          });
+        });
+      } else {
+        console.error('Form not found!');
+      }
     });
-  });
-} else {
-  console.error('Form not found!');
-}
-</script>
+
+  </script>
 
 </body>
 
