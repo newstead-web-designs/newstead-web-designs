@@ -11,6 +11,25 @@
     gtag('config', 'G-087M3ZRWZ4');
   </script>
 
+  <!-- Google tag (gtag.js) event - delayed navigation helper -->
+  <script>
+    // Helper function to delay opening a URL until a gtag event is sent.
+    // Call it in response to an action that should navigate to a URL.
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion_event_submit_lead_form', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+        // <event_parameters>
+      });
+      return false;
+    }
+  </script>
+
   <!-- Meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -163,7 +182,7 @@
 
           <h2 class="mb-4">Get Your Free Tailored Website Planning Report</h2>
 
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html"
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
             class="needs-validation p-4 rounded shadow-sm" novalidate>
 
             <!-- Netlify hidden input -->
@@ -215,6 +234,24 @@
 
           </form>
         </div>
+
+        <!-- GA4 Conversion Tracking Script -->
+        <script>
+          const contactForm = document.querySelector('form[name="contact"]');
+
+          contactForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // temporarily stop form submission
+
+            // Fire GA4 conversion event for Google Ads
+            gtag('event', 'conversion_event_submit_lead_form');
+
+            // Slight delay to ensure GA4 receives the event
+            setTimeout(() => {
+              contactForm.submit(); // then submit form normally
+            }, 300); // 300ms delay
+          });
+        </script>
+
       </div>
     </section>
 
