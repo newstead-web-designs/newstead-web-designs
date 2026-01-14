@@ -19,6 +19,6 @@ if (form) {
     // Submit the form after GA4 event is sent
     setTimeout(() => {
       form.submit();
-    }, 300); // 300ms delay to ensure GA4 has time to register
+    }, 10000); // 10000ms delay to ensure GA4 has time to register
   });
 }
