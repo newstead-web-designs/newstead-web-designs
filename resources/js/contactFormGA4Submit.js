@@ -1,4 +1,4 @@
-// contactFormGA4Submit.js
+// Contact Form GA4 Submit Script
 const form = document.getElementById('contact-form');
 if (form) {
   form.addEventListener('submit', function (e) {
@@ -10,6 +10,9 @@ if (form) {
       'event_label': 'Contact Page Submission',
       'send_to': 'G-087M3ZRWZ4'
     });
+
+    // Log to console to confirm the event triggers
+    console.log("GA4 Event triggered!");
 
     // Wait 300ms then submit the form so GA4 has time to register the event
     setTimeout(() => {
