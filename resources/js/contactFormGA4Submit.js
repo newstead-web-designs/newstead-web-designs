@@ -16,9 +16,9 @@ if (form) {
     // Log to console to confirm the event triggers
     console.log("GA4 Event triggered!");
 
-    // TEMPORARILY COMMENT OUT the actual form submission for testing
-    // setTimeout(() => {
-    //   form.submit();
-    // }, 300);
+    // Submit the form after GA4 event is sent
+    setTimeout(() => {
+      form.submit();
+    }, 300); // 300ms delay to ensure GA4 has time to register
   });
 }
