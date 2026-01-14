@@ -11,25 +11,6 @@
     gtag('config', 'G-087M3ZRWZ4');
   </script>
 
-  <!-- Google tag (gtag.js) event - delayed navigation helper -->
-  <script>
-    // Helper function to delay opening a URL until a gtag event is sent.
-    // Call it in response to an action that should navigate to a URL.
-    function gtagSendEvent(url) {
-      var callback = function () {
-        if (typeof url === 'string') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion_event_submit_lead_form', {
-        'event_callback': callback,
-        'event_timeout': 2000,
-        // <event_parameters>
-      });
-      return false;
-    }
-  </script>
-
   <!-- Meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -236,29 +217,23 @@
         </div>
 
         <!-- GA4 Conversion Tracking Script -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const contactForm = document.querySelector('form[name="contact"]');
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.querySelector('form[name="contact"]');
+            if (!contactForm) return;
 
-  if (!contactForm) return;
+            contactForm.addEventListener('submit', function (e) {
+              e.preventDefault(); // stop immediate submission
 
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault(); // Stop immediate submission
-
-    // Fire GA4 event
-    gtag('event', 'conversion_event_submit_lead_form', {
-      event_callback: function () {
-        // Submit form after GA4 event fires
-        contactForm.submit();
-      },
-      event_timeout: 2000
-    });
-  });
-});
-</script>
-
-
-
+              gtag('event', 'conversion_event_submit_lead_form', {
+                event_callback: function () {
+                  contactForm.submit(); // submit after GA4 records event
+                },
+                event_timeout: 3000 // allow up to 3 seconds
+              });
+            });
+          });
+        </script>
 
       </div>
     </section>
