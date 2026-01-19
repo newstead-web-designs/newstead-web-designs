@@ -60,10 +60,8 @@
     --color-bg-primary: #000000;
     --color-bg-secondary: #091d17;
     --color-bg-tertiary: #091d17;
-    --color-overlay-primary: rgba(9, 29, 23, 0.7);
-    /* #091d17; */
-    --color-overlay-secondary: rgba(0, 0, 0, 0.7);
-    /* #000000; */
+    --color-overlay-primary: rgba(9, 29, 23, 0.7); /* #091d17; */
+    --color-overlay-secondary: rgba(0, 0, 0, 0.7); /* #000000; */
     --color-brand-primary: #f7f9f4;
     --color-brand-secondary: #e4ede4;
     --color-accent-primary: #fffbe0;
@@ -519,6 +517,10 @@
 
   .gst {
     font-size: var(--font-size-h5);
+  }
+
+  .promotion {
+    color: var(--color-accent-secondary);
   }
 
   /* =======================
