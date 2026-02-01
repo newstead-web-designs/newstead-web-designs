@@ -512,18 +512,6 @@
   }
 
   /* =======================
-  Pricing
-   ======================= */
-
-  .gst {
-    font-size: var(--font-size-h5);
-  }
-
-  .promotion {
-    color: var(--color-accent-secondary);
-  }
-
-  /* =======================
    Contact Form
    ======================= */
 
